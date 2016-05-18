@@ -8,3 +8,5 @@
 \\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\SOLIDWORKS\Plataforma-Static 1
 \\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\SOLIDWORKS\Plataforma-Static 1
 \\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\SOLIDWORKS\Plataforma-Static 1
+\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\SOLIDWORKS\Plataforma-Static 1
+\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\SOLIDWORKS\Plataforma-Static 1
