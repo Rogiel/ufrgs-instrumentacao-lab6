@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=GND Pin=BA-1
+Removed Pin From Net: NetName=VCC Pin=BA-2
+Change Component Designator: OldDesignator=R1 NewDesignator=RA3
+Added Component: Designator=RA1(AXIAL-0.4)
+Added Component: Designator=RA2(AXIAL-0.4)
+Added Pin To Net: NetName=VCC Pin=RA1-1
+Added Pin To Net: NetName=GND Pin=RA2-1
+Change Net Name : Old Net Name=NetR1_1 New Net Name=NetRA3_1
+Change Net Name : Old Net Name=NetR1_2 New Net Name=NetRA3_2
+Added Pin To Net: NetName=NetBA_1 Pin=BA-1
+Added Pin To Net: NetName=NetBA_1 Pin=RA2-2
+Added Net: Name=NetBA_1
+Added Pin To Net: NetName=NetBA_2 Pin=BA-2
+Added Pin To Net: NetName=NetBA_2 Pin=RA1-2
+Added Net: Name=NetBA_2
+Added Member To Class: ClassName=Célula 1 Member=Component RA1 Res2
+Added Member To Class: ClassName=Célula 1 Member=Component RA2 Res2
