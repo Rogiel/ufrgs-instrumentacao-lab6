@@ -1,0 +1,83 @@
+Removed Member From Class: ClassName=Estágio 2 - Amplificação Member=R3
+Added Pin To Net: NetName=VCC Pin=J4-2
+Added Pin To Net: NetName=VCC Pin=J5-2
+Added Pin To Net: NetName=VCC Pin=P3-1
+Added Pin To Net: NetName=VCC Pin=P4-1
+Added Pin To Net: NetName=INA_OUT_1 Pin=R9-1
+Added Pin To Net: NetName=INA_OUT_1 Pin=R11-1
+Added Pin To Net: NetName=-VCC Pin=U3-4
+Added Pin To Net: NetName=GND Pin=U3-5
+Added Pin To Net: NetName=INA_OUT_1 Pin=U3-6
+Added Pin To Net: NetName=VCC Pin=U3-7
+Added Pin To Net: NetName=-VCC Pin=U4-4
+Added Pin To Net: NetName=GND Pin=U4-5
+Added Pin To Net: NetName=INA_OUT_1 Pin=U4-6
+Added Pin To Net: NetName=VCC Pin=U4-7
+Added Pin To Net: NetName=GND Pin=U7-3
+Added Pin To Net: NetName=-VCC Pin=U7-4
+Added Pin To Net: NetName=VCC Pin=U7-7
+Added Pin To Net: NetName=GND Pin=U8-3
+Added Pin To Net: NetName=-VCC Pin=U8-4
+Added Pin To Net: NetName=VCC Pin=U8-7
+Added Pin To Net: NetName=NetJ4_1 Pin=J4-1
+Added Pin To Net: NetName=NetJ4_1 Pin=J4-3
+Added Pin To Net: NetName=NetJ4_1 Pin=U3-2
+Added Net: Name=NetJ4_1
+Added Pin To Net: NetName=NetJ4_4 Pin=J4-4
+Added Pin To Net: NetName=NetJ4_4 Pin=P3-2
+Added Net: Name=NetJ4_4
+Added Pin To Net: NetName=NetJ5_1 Pin=J5-1
+Added Pin To Net: NetName=NetJ5_1 Pin=J5-3
+Added Pin To Net: NetName=NetJ5_1 Pin=U4-2
+Added Net: Name=NetJ5_1
+Added Pin To Net: NetName=NetJ5_4 Pin=J5-4
+Added Pin To Net: NetName=NetJ5_4 Pin=P4-2
+Added Net: Name=NetJ5_4
+Added Pin To Net: NetName=NetP3_3 Pin=P3-3
+Added Pin To Net: NetName=NetP3_3 Pin=U3-3
+Added Net: Name=NetP3_3
+Added Pin To Net: NetName=NetP4_3 Pin=P4-3
+Added Pin To Net: NetName=NetP4_3 Pin=U4-3
+Added Net: Name=NetP4_3
+Added Pin To Net: NetName=NetR3_1 Pin=R3-1
+Added Pin To Net: NetName=NetR3_1 Pin=U3-8
+Added Net: Name=NetR3_1
+Added Pin To Net: NetName=NetR3_2 Pin=R3-2
+Added Pin To Net: NetName=NetR3_2 Pin=U3-1
+Added Net: Name=NetR3_2
+Added Pin To Net: NetName=NetR4_1 Pin=R4-1
+Added Pin To Net: NetName=NetR4_1 Pin=U4-8
+Added Net: Name=NetR4_1
+Added Pin To Net: NetName=NetR4_2 Pin=R4-2
+Added Pin To Net: NetName=NetR4_2 Pin=U4-1
+Added Net: Name=NetR4_2
+Added Pin To Net: NetName=NetR9_2 Pin=R9-2
+Added Pin To Net: NetName=NetR9_2 Pin=R10-1
+Added Pin To Net: NetName=NetR9_2 Pin=U7-2
+Added Net: Name=NetR9_2
+Added Pin To Net: NetName=NetR10_2 Pin=R10-2
+Added Pin To Net: NetName=NetR10_2 Pin=U7-6
+Added Net: Name=NetR10_2
+Added Pin To Net: NetName=NetR11_2 Pin=R11-2
+Added Pin To Net: NetName=NetR11_2 Pin=R12-1
+Added Pin To Net: NetName=NetR11_2 Pin=U8-2
+Added Net: Name=NetR11_2
+Added Pin To Net: NetName=NetR12_2 Pin=R12-2
+Added Pin To Net: NetName=NetR12_2 Pin=U8-6
+Added Net: Name=NetR12_2
+Added Member To Class: ClassName=Estágio 1 - Diferencial Member=Component J4 691244510004
+Added Member To Class: ClassName=Estágio 1 - Diferencial Member=Component J5 691244510004
+Added Member To Class: ClassName=Estágio 1 - Diferencial Member=Component P3 RPot
+Added Member To Class: ClassName=Estágio 1 - Diferencial Member=Component P4 RPot
+Added Member To Class: ClassName=Estágio 1 - Diferencial Member=Component R3 Res2
+Added Member To Class: ClassName=Estágio 1 - Diferencial Member=Component R4 Res2
+Added Member To Class: ClassName=Estágio 2 - Amplificação Member=Component R9 Res1
+Added Member To Class: ClassName=Estágio 2 - Amplificação Member=Component R10 Res1
+Added Member To Class: ClassName=Estágio 2 - Amplificação Member=Component R11 Res1
+Added Member To Class: ClassName=Estágio 2 - Amplificação Member=Component R12 Res1
+Added Member To Class: ClassName=Estágio 1 - Diferencial Member=Component U3 INA126PA
+Added Member To Class: ClassName=Estágio 1 - Diferencial Member=Component U4 INA126PA
+Added Member To Class: ClassName=Estágio 2 - Amplificação Member=Component U7 OPA27GP
+Added Member To Class: ClassName=Estágio 2 - Amplificação Member=Component U8 OPA27GP
+Added Room: Name=Estágio 1 - Diferencial
+Added Room: Name=Estágio 2 - Amplificação

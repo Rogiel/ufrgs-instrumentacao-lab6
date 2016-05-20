@@ -1,0 +1,53 @@
+Net Status Report
+Filename     : \\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc
+Date         : 5/19/16
+Time         : 11:08:08 PM
+Time Elapsed : 00:00:00
+
+Nets, Layer, Length
+    -VCC, Signal Layers Only, 14581.507mils
+    CELLA, Signal Layers Only, 2696.056mils
+    CELLB, Signal Layers Only, 6416.071mils
+    CELLC, Signal Layers Only, 2331.059mils
+    CELLD, Signal Layers Only, 1953.747mils
+    GND, Signal Layers Only, 39322.972mils
+    NetBA_3, Signal Layers Only, 0mils
+    NetBB_3, Signal Layers Only, 0mils
+    NetBC_3, Signal Layers Only, 0mils
+    NetBD_3, Signal Layers Only, 0mils
+    NetFCA_2, Signal Layers Only, 342.128mils
+    NetFCB_2, Signal Layers Only, 342.125mils
+    NetFCC_2, Signal Layers Only, 342.128mils
+    NetFCD_2, Signal Layers Only, 342.125mils
+    NetGA_2, Signal Layers Only, 2771.821mils
+    NetGB_2, Signal Layers Only, 5037.82mils
+    NetGC_2, Signal Layers Only, 7073.263mils
+    NetGD_2, Signal Layers Only, 8359.01mils
+    NetJ1_1, Signal Layers Only, 674.047mils
+    NetJ1_3, Signal Layers Only, 710.902mils
+    NetJA_1, Signal Layers Only, 3170.957mils
+    NetJB_1, Signal Layers Only, 1789.471mils
+    NetJC_1, Signal Layers Only, 1624.03mils
+    NetJD_1, Signal Layers Only, 1831.681mils
+    NetR11_2, Signal Layers Only, 5440.872mils
+    NetR1_1, Signal Layers Only, 362.84mils
+    NetR1_2, Signal Layers Only, 362.838mils
+    NetR2_1, Signal Layers Only, 362.839mils
+    NetR2_2, Signal Layers Only, 362.839mils
+    NetR3_1, Signal Layers Only, 362.837mils
+    NetR3_2, Signal Layers Only, 362.837mils
+    NetR4_1, Signal Layers Only, 362.838mils
+    NetR4_2, Signal Layers Only, 362.84mils
+    NetR5_2, Signal Layers Only, 1933.783mils
+    NetR7_2, Signal Layers Only, 3042.105mils
+    NetR9_2, Signal Layers Only, 2200.45mils
+    NetU1_6, Signal Layers Only, 677.941mils
+    NetU3_6, Signal Layers Only, 372.743mils
+    NetU5_6, Signal Layers Only, 417.202mils
+    NetU7_6, Signal Layers Only, 372.743mils
+    OUTA, Signal Layers Only, 1733.925mils
+    OUTB, Signal Layers Only, 2343.99mils
+    OUTC, Signal Layers Only, 4112.216mils
+    OUTD, Signal Layers Only, 1280.481mils
+    VCC, Signal Layers Only, 45313.562mils
+count : 45

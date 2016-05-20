@@ -1,0 +1,6 @@
+Remove Pin=R7-1 From Net=INA_OUT_2
+Remove Pin=R9-1 From Net=INA_OUT_3
+Remove Pin=R11-1 From Net=INA_OUT_4
+Remove Pin=U2-6 From Net=INA_OUT_2
+Remove Pin=U3-6 From Net=INA_OUT_3
+Remove Pin=U4-6 From Net=INA_OUT_4

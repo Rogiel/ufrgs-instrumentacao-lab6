@@ -1,0 +1,9 @@
+Change Component Designator: OldDesignator=J3 NewDesignator=J4
+Change Component Designator: OldDesignator=J4 NewDesignator=J3
+Added Component: Designator=U?(PA8)
+Change Net Name : Old Net Name=NetJ3_2 New Net Name=NetJ4_2
+Change Net Name : Old Net Name=NetJ4_2 New Net Name=NetJ3_2
+Added Class: Name=Estágio 3 - Filtro
+Added Room: Name=Estágio 1 - Diferencial
+Added Room: Name=Estágio 2 - Amplificação
+Added Room: Name=Estágio 3 - Filtro

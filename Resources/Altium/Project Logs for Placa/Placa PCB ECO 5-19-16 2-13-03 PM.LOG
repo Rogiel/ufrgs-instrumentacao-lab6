@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=VCC Pin=J2-1
+Change Component Designator: OldDesignator=J1 NewDesignator=J?
+Added Pin To Net: NetName=VCC Pin=J2-2
+Change Net Name : Old Net Name=NetR6_2 New Net Name=GAIN_OUT_1
+Change Net Name : Old Net Name=NetR8_2 New Net Name=GAIN_OUT_2
+Change Net Name : Old Net Name=NetR10_2 New Net Name=GAIN_OUT_3
+Change Net Name : Old Net Name=NetR12_2 New Net Name=GAIN_OUT_4
+Added Pin To Net: NetName=NetJ2_1 Pin=J2-1
+Added Pin To Net: NetName=NetJ2_1 Pin=J2-3
+Added Pin To Net: NetName=NetJ2_1 Pin=U1-2
+Added Net: Name=NetJ2_1
+Added Room: Name=Estágio 1 - Diferencial
+Added Room: Name=Estágio 2 - Amplificação

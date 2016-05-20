@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=VCC Pin=J?-1
+Removed Pin From Net: NetName=-VCC Pin=J?-3
+Change Component Designator: OldDesignator=J? NewDesignator=J1
+Added Component: Designator=REG1(ISOWATT220AB)
+Added Component: Designator=REG2(ISOWATT220AB)
+Added Pin To Net: NetName=VCC Pin=REG1-2
+Added Pin To Net: NetName=GND Pin=REG1-3
+Added Pin To Net: NetName=GND Pin=REG2-1
+Added Pin To Net: NetName=-VCC Pin=REG2-3
+Added Pin To Net: NetName=NetJ1_1 Pin=J1-1
+Added Pin To Net: NetName=NetJ1_1 Pin=REG1-1
+Added Net: Name=NetJ1_1
+Added Pin To Net: NetName=NetJ1_3 Pin=J1-3
+Added Pin To Net: NetName=NetJ1_3 Pin=REG2-2
+Added Net: Name=NetJ1_3
+Added Member To Class: ClassName=Estágio 1 - Diferencial Member=Component REG1 L7805CP
+Added Member To Class: ClassName=Estágio 1 - Diferencial Member=Component REG2 L7905CP
+Added Room: Name=Estágio 1 - Diferencial
+Added Room: Name=Estágio 2 - Amplificação

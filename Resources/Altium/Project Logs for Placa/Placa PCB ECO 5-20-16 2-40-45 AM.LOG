@@ -1,0 +1,16 @@
+Added Component: Designator=GA(TSR3006)
+Added Component: Designator=GB(TSR3006)
+Added Component: Designator=GC(TSR3006)
+Added Component: Designator=GD(TSR3006)
+Added Pin To Net: NetName=NetGA_2 Pin=GA-2
+Added Pin To Net: NetName=OUTA Pin=GA-3
+Added Pin To Net: NetName=NetGB_2 Pin=GB-2
+Added Pin To Net: NetName=OUTB Pin=GB-3
+Added Pin To Net: NetName=NetGC_2 Pin=GC-2
+Added Pin To Net: NetName=OUTC Pin=GC-3
+Added Pin To Net: NetName=NetGD_2 Pin=GD-2
+Added Pin To Net: NetName=OUTD Pin=GD-3
+Added Member To Class: ClassName=Estágio 1 - Diferencial Member=Component GA Res Tap
+Added Member To Class: ClassName=Estágio 1 - Diferencial Member=Component GB Res Tap
+Added Member To Class: ClassName=Estágio 1 - Diferencial Member=Component GC Res Tap
+Added Member To Class: ClassName=Estágio 1 - Diferencial Member=Component GD Res Tap

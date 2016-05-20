@@ -1,0 +1,20 @@
+Added Component: Designator=BA(TSR3006)
+Added Component: Designator=BB(TSR3006)
+Added Component: Designator=BC(TSR3006)
+Added Component: Designator=BD(TSR3006)
+Added Pin To Net: NetName=GND Pin=BA-1
+Added Pin To Net: NetName=VCC Pin=BA-2
+Added Pin To Net: NetName=NetBA_3 Pin=BA-3
+Added Pin To Net: NetName=GND Pin=BB-1
+Added Pin To Net: NetName=VCC Pin=BB-2
+Added Pin To Net: NetName=NetBB_3 Pin=BB-3
+Added Pin To Net: NetName=GND Pin=BC-1
+Added Pin To Net: NetName=VCC Pin=BC-2
+Added Pin To Net: NetName=NetBC_3 Pin=BC-3
+Added Pin To Net: NetName=GND Pin=BD-1
+Added Pin To Net: NetName=VCC Pin=BD-2
+Added Pin To Net: NetName=NetBD_3 Pin=BD-3
+Added Member To Class: ClassName=Célula 1 Member=Component BA Res Tap
+Added Member To Class: ClassName=Célula 2 Member=Component BB Res Tap
+Added Member To Class: ClassName=Célula 3 Member=Component BC Res Tap
+Added Member To Class: ClassName=Célula 4 Member=Component BD Res Tap

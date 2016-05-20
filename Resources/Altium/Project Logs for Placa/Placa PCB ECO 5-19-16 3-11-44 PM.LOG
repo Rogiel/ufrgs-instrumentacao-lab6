@@ -1,0 +1,10 @@
+Added Component: Designator=J?(691244510003)
+Added Component: Designator=U?(PA8)
+Added Pin To Net: NetName=VCC Pin=J?-1
+Added Pin To Net: NetName=GND Pin=J?-2
+Added Pin To Net: NetName=-VCC Pin=J?-3
+Added Member To Class: ClassName=Estágio 1 - Diferencial Member=Component J? 691244510003
+Added Member To Class: ClassName=Estágio 3 - Filtro Member=Component U? MAX7410EPA
+Added Room: Name=Estágio 1 - Diferencial
+Added Room: Name=Estágio 2 - Amplificação
+Added Room: Name=Estágio 3 - Filtro

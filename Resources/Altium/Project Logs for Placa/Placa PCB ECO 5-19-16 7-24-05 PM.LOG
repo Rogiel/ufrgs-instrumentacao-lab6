@@ -1,0 +1,22 @@
+Removed Pin From Net: NetName=NetR5_1 Pin=U1-6
+Added Component: Designator=C3(RAD-0.3)
+Added Component: Designator=J6(691244510005)
+Added Component: Designator=U?(PA8)
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=GND Pin=J6-5
+Added Pin To Net: NetName=GND Pin=U?-3
+Added Pin To Net: NetName=VCC Pin=U?-4
+Added Pin To Net: NetName=NetR5_1 Pin=U?-5
+Change Net Name : Old Net Name=NetR6_2 New Net Name=OU1
+Added Pin To Net: NetName=NetC3_2 Pin=C3-2
+Added Pin To Net: NetName=NetC3_2 Pin=U?-8
+Added Net: Name=NetC3_2
+Added Pin To Net: NetName=NetU1_6 Pin=U1-6
+Added Pin To Net: NetName=NetU1_6 Pin=U?-2
+Added Net: Name=NetU1_6
+Added Pin To Net: NetName=OUT1 Pin=J6-1
+Added Net: Name=OUT1
+Added Member To Class: ClassName=Estágio 1 - Diferencial Member=Component C3 Cap
+Added Member To Class: ClassName=Estágio 1 - Diferencial Member=Component J6 691244510005
+Added Member To Class: ClassName=Estágio 1 - Diferencial Member=Component U? MAX7410EPA
+Added Room: Name=Estágio 1 - Diferencial

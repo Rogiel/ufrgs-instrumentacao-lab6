@@ -1,0 +1,460 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 { 
+			font-family : sans-serif;
+			color : white;
+			background-color : #21489e;
+			padding: 0.3em;
+		}
+		body { 
+			font-family : verdana;
+		}
+		td, th {  
+			padding: 0.5em;
+			text-align : center;
+			width : 18%;	
+		}
+		th { 
+			background-color : #A6CAF0;
+		
+		}
+		th.column1, td.column1 { 
+			text-align: left;
+			width : auto; 
+		}
+		table { 
+			width : 100%; 
+		}
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3 {
+			padding-top : 0.1em;
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width : auto;
+			vertical-align: top
+		}
+		.front_matter_column1 {
+			text-align : right;
+		}
+		.total_column1, .total_column {
+			font-weight : bold;	
+		}
+		.total_column1 {
+			text-align : right;
+		}
+		.front_matter_column2 {
+			text-align : center;
+		}
+		.front_matter_column3 {
+			text-align : left;
+		}
+		.warning, .error { 
+			color : red;
+			font-weight : bold;
+		}	
+		tr.onmouseout_odd { 
+			background-color : #EEEEE0 
+		}
+		tr.onmouseout_even { 
+			background-color : #F3F3E3   
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : lightYellow 
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #008000 
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+			
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);		
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {	
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}	
+	</script><title>Net Status Report</title>
+</head>
+<body onload="document.getElementById('radio_mil').click()"><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD15\Templates\AD-rgb_logo_223x64.gif
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Net Status Report</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">5/19/16</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">11:08:08 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3"><a href="file:///\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc" class="file"><acronym title="\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc">\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc</acronym></a></td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Units</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">
+<form><input type="radio" name="radio_units" id="radio_mm" onclick="changeUnits(this, 'mm')">mm<input type="radio" name="radio_units" id="radio_mil" onclick="changeUnits(this, 'mil')">mils</form>
+</td>
+</tr>
+</table>
+<hr><a name="IDASA20B"><table>
+<tr>
+<th class="column1">Nets</th>
+<th class="column2">Layer</th>
+<th class="column3">Length</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1541.274mil|Location2.X=6699mil|Location1.Y=1535.371mil|Location2.Y=4153mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1541.274mil|Location2.X=6699mil|Location1.Y=1535.371mil|Location2.Y=4153mil|Absolute=True">-VCC</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="145815066">14581.507mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2330.645mil|Location2.X=3434.707mil|Location1.Y=1940.093mil|Location2.Y=4214.235mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2330.645mil|Location2.X=3434.707mil|Location1.Y=1940.093mil|Location2.Y=4214.235mil|Absolute=True">CELLA</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="26960560">2696.056mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3216.473mil|Location2.X=6384.315mil|Location1.Y=1940.093mil|Location2.Y=4821mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3216.473mil|Location2.X=6384.315mil|Location1.Y=1940.093mil|Location2.Y=4821mil|Absolute=True">CELLB</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="64160714">6416.071mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3100mil|Location2.X=4066.991mil|Location1.Y=1824mil|Location2.Y=3131.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3100mil|Location2.X=4066.991mil|Location1.Y=1824mil|Location2.Y=3131.559mil|Absolute=True">CELLC</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="23310593">2331.059mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4791.275mil|Location2.X=6384.315mil|Location1.Y=1940.093mil|Location2.Y=3033.133mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4791.275mil|Location2.X=6384.315mil|Location1.Y=1940.093mil|Location2.Y=3033.133mil|Absolute=True">CELLD</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="19537465">1953.747mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=929mil|Location2.X=7145mil|Location1.Y=1150.527mil|Location2.Y=5145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=929mil|Location2.X=7145mil|Location1.Y=1150.527mil|Location2.Y=5145mil|Absolute=True">GND</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="393229719">39322.972mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2473.952mil|Location2.X=2541.008mil|Location1.Y=4148.755mil|Location2.Y=4215.81mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2473.952mil|Location2.X=2541.008mil|Location1.Y=4148.755mil|Location2.Y=4215.81mil|Absolute=True">NetBA_3</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="0">0mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5426.708mil|Location2.X=5493.764mil|Location1.Y=4148.755mil|Location2.Y=4215.81mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5426.708mil|Location2.X=5493.764mil|Location1.Y=4148.755mil|Location2.Y=4215.81mil|Absolute=True">NetBB_3</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="0">0mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2473.952mil|Location2.X=2541.008mil|Location1.Y=2967.653mil|Location2.Y=3034.707mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2473.952mil|Location2.X=2541.008mil|Location1.Y=2967.653mil|Location2.Y=3034.707mil|Absolute=True">NetBC_3</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="0">0mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5426.708mil|Location2.X=5493.764mil|Location1.Y=2967.653mil|Location2.Y=3034.707mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5426.708mil|Location2.X=5493.764mil|Location1.Y=2967.653mil|Location2.Y=3034.707mil|Absolute=True">NetBD_3</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="0">0mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3367.653mil|Location2.X=3770.93mil|Location1.Y=4447.181mil|Location2.Y=4514.235mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3367.653mil|Location2.X=3770.93mil|Location1.Y=4447.181mil|Location2.Y=4514.235mil|Absolute=True">NetFCA_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3421280">342.128mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6317.261mil|Location2.X=6720.534mil|Location1.Y=4447.181mil|Location2.Y=4514.235mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6317.261mil|Location2.X=6720.534mil|Location1.Y=4447.181mil|Location2.Y=4514.235mil|Absolute=True">NetFCB_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3421248">342.125mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3364.503mil|Location2.X=3767.78mil|Location1.Y=3364.505mil|Location2.Y=3431.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3364.503mil|Location2.X=3767.78mil|Location1.Y=3364.505mil|Location2.Y=3431.559mil|Absolute=True">NetFCC_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3421280">342.128mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6317.261mil|Location2.X=6720.534mil|Location1.Y=3266.079mil|Location2.Y=3333.133mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6317.261mil|Location2.X=6720.534mil|Location1.Y=3266.079mil|Location2.Y=3333.133mil|Absolute=True">NetFCD_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3421248">342.125mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=950mil|Location2.X=2393.763mil|Location1.Y=775mil|Location2.Y=1390.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=950mil|Location2.X=2393.763mil|Location1.Y=775mil|Location2.Y=1390.378mil|Absolute=True">NetGA_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="27718207">2771.821mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=865.146mil|Location2.X=3279.591mil|Location1.Y=684mil|Location2.Y=1447mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=865.146mil|Location2.X=3279.591mil|Location1.Y=684mil|Location2.Y=1447mil|Absolute=True">NetGB_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="50378203">5037.82mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3559.306mil|Location2.X=7140mil|Location1.Y=760mil|Location2.Y=1390.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3559.306mil|Location2.X=7140mil|Location1.Y=760mil|Location2.Y=1390.378mil|Absolute=True">NetGC_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="70732634">7073.263mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3880mil|Location2.X=7050mil|Location1.Y=544mil|Location2.Y=1672mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3880mil|Location2.X=7050mil|Location1.Y=544mil|Location2.Y=1672mil|Absolute=True">NetGD_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="83590097">8359.01mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5964.503mil|Location2.X=6642.779mil|Location1.Y=2124.347mil|Location2.Y=2413.645mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5964.503mil|Location2.X=6642.779mil|Location1.Y=2124.347mil|Location2.Y=2413.645mil|Absolute=True">NetJ1_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="6740467">674.047mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5964.503mil|Location2.X=6642.779mil|Location1.Y=1635.371mil|Location2.Y=2013.645mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5964.503mil|Location2.X=6642.779mil|Location1.Y=1635.371mil|Location2.Y=2013.645mil|Absolute=True">NetJ1_3</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="7109017">710.902mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1329.661mil|Location2.X=2626mil|Location1.Y=3982.417mil|Location2.Y=4823mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1329.661mil|Location2.X=2626mil|Location1.Y=3982.417mil|Location2.Y=4823mil|Absolute=True">NetJA_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="31709565">3170.957mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4166.416mil|Location2.X=5493.764mil|Location1.Y=3982.417mil|Location2.Y=4478.999mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4166.416mil|Location2.X=5493.764mil|Location1.Y=3982.417mil|Location2.Y=4478.999mil|Absolute=True">NetJB_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="17894710">1789.471mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1329.663mil|Location2.X=2541.008mil|Location1.Y=3001.315mil|Location2.Y=3497.897mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1329.663mil|Location2.X=2541.008mil|Location1.Y=3001.315mil|Location2.Y=3497.897mil|Absolute=True">NetJC_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="16240300">1624.03mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4282.419mil|Location2.X=5493.764mil|Location1.Y=3001.313mil|Location2.Y=3497.895mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4282.419mil|Location2.X=5493.764mil|Location1.Y=3001.313mil|Location2.Y=3497.895mil|Absolute=True">NetJD_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="18316813">1831.681mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1185mil|Location2.X=4870.212mil|Location1.Y=1195mil|Location2.Y=2447.307mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1185mil|Location2.X=4870.212mil|Location1.Y=1195mil|Location2.Y=2447.307mil|Absolute=True">NetR11_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="54408724">5440.872mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2773.952mil|Location2.X=2889.041mil|Location1.Y=4348.755mil|Location2.Y=4755.969mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2773.952mil|Location2.X=2889.041mil|Location1.Y=4348.755mil|Location2.Y=4755.969mil|Absolute=True">NetR1_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3628395">362.84mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2425.923mil|Location2.X=2541.008mil|Location1.Y=4348.755mil|Location2.Y=4755.969mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2425.923mil|Location2.X=2541.008mil|Location1.Y=4348.755mil|Location2.Y=4755.969mil|Absolute=True">NetR1_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3628378">362.838mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5726.708mil|Location2.X=5841.795mil|Location1.Y=4348.755mil|Location2.Y=4755.969mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5726.708mil|Location2.X=5841.795mil|Location1.Y=4348.755mil|Location2.Y=4755.969mil|Absolute=True">NetR2_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3628387">362.839mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5378.677mil|Location2.X=5493.764mil|Location1.Y=4348.755mil|Location2.Y=4755.969mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5378.677mil|Location2.X=5493.764mil|Location1.Y=4348.755mil|Location2.Y=4755.969mil|Absolute=True">NetR2_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3628387">362.839mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2773.952mil|Location2.X=2889.039mil|Location1.Y=3167.653mil|Location2.Y=3574.865mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2773.952mil|Location2.X=2889.039mil|Location1.Y=3167.653mil|Location2.Y=3574.865mil|Absolute=True">NetR3_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3628367">362.837mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2425.921mil|Location2.X=2541.008mil|Location1.Y=3167.653mil|Location2.Y=3574.865mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2425.921mil|Location2.X=2541.008mil|Location1.Y=3167.653mil|Location2.Y=3574.865mil|Absolute=True">NetR3_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3628367">362.837mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5726.708mil|Location2.X=5841.793mil|Location1.Y=3167.653mil|Location2.Y=3574.867mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5726.708mil|Location2.X=5841.793mil|Location1.Y=3167.653mil|Location2.Y=3574.867mil|Absolute=True">NetR4_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3628378">362.838mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5378.675mil|Location2.X=5493.764mil|Location1.Y=3167.653mil|Location2.Y=3574.867mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5378.675mil|Location2.X=5493.764mil|Location1.Y=3167.653mil|Location2.Y=3574.867mil|Absolute=True">NetR4_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3628395">362.84mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1264mil|Location2.X=2393.763mil|Location1.Y=1251.117mil|Location2.Y=2147.307mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1264mil|Location2.X=2393.763mil|Location1.Y=1251.117mil|Location2.Y=2147.307mil|Absolute=True">NetR5_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="19337826">1933.783mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1741.274mil|Location2.X=4066.991mil|Location1.Y=1251.117mil|Location2.Y=2447.307mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1741.274mil|Location2.X=4066.991mil|Location1.Y=1251.117mil|Location2.Y=2447.307mil|Absolute=True">NetR7_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="30421049">3042.105mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1741.274mil|Location2.X=3279.591mil|Location1.Y=1251.117mil|Location2.Y=2204mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1741.274mil|Location2.X=3279.591mil|Location1.Y=1251.117mil|Location2.Y=2204mil|Absolute=True">NetR9_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="22004495">2200.45mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2773.952mil|Location2.X=3191mil|Location1.Y=4080mil|Location2.Y=4414.235mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2773.952mil|Location2.X=3191mil|Location1.Y=4080mil|Location2.Y=4414.235mil|Absolute=True">NetU1_6</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="6779414">677.941mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5726.708mil|Location2.X=6084.315mil|Location1.Y=4148.755mil|Location2.Y=4414.235mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5726.708mil|Location2.X=6084.315mil|Location1.Y=4148.755mil|Location2.Y=4414.235mil|Absolute=True">NetU3_6</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3727427">372.743mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2773.952mil|Location2.X=3131.557mil|Location1.Y=2967.653mil|Location2.Y=3331.559mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2773.952mil|Location2.X=3131.557mil|Location1.Y=2967.653mil|Location2.Y=3331.559mil|Absolute=True">NetU5_6</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="4172018">417.202mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5726.708mil|Location2.X=6084.315mil|Location1.Y=2967.653mil|Location2.Y=3233.133mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5726.708mil|Location2.X=6084.315mil|Location1.Y=2967.653mil|Location2.Y=3233.133mil|Absolute=True">NetU7_6</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3727427">372.743mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=950mil|Location2.X=1426.245mil|Location1.Y=831.237mil|Location2.Y=2147.307mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=950mil|Location2.X=1426.245mil|Location1.Y=831.237mil|Location2.Y=2147.307mil|Absolute=True">OUTA</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="17339246">1733.925mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=950mil|Location2.X=1930mil|Location1.Y=1031.237mil|Location2.Y=2147.307mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=950mil|Location2.X=1930mil|Location1.Y=1031.237mil|Location2.Y=2147.307mil|Absolute=True">OUTB</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="23439904">2343.99mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=930mil|Location2.X=2206mil|Location1.Y=1198mil|Location2.Y=3054mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=930mil|Location2.X=2206mil|Location1.Y=1198mil|Location2.Y=3054mil|Absolute=True">OUTC</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="41122160">4112.216mils
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=950mil|Location2.X=1426.245mil|Location1.Y=1431.237mil|Location2.Y=2447.307mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=950mil|Location2.X=1426.245mil|Location1.Y=1431.237mil|Location2.Y=2447.307mil|Absolute=True">OUTD</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="12804814">1280.481mils
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=950mil|Location2.X=7145mil|Location1.Y=1025mil|Location2.Y=5145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=\\Mac\Home\Documents\GitHub\ufrgs-instrumentacao-lab6\Resources\Altium\Placa.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=950mil|Location2.X=7145mil|Location1.Y=1025mil|Location2.Y=5145mil|Absolute=True">VCC</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="453135622">45313.562mils
+			</a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br></body>
+</html>

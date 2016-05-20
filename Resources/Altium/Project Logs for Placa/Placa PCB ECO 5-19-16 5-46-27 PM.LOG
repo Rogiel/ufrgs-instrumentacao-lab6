@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=VCC Pin=C1-1
+Added Member To Class: ClassName=Estágio 1 - Diferencial Member=Component R5 Res1
+Added Member To Class: ClassName=Estágio 1 - Diferencial Member=Component R6 Res1
+Added Room: Name=Estágio 1 - Diferencial

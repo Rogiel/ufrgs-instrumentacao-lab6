@@ -1,0 +1,34 @@
+Added Pin To Net: NetName=GND Pin=BD-1
+Added Pin To Net: NetName=VCC Pin=BD-2
+Added Pin To Net: NetName=NetBD_3 Pin=BD-3
+Added Pin To Net: NetName=GND Pin=FCD-1
+Added Pin To Net: NetName=NetFCD_2 Pin=FCD-2
+Added Pin To Net: NetName=NetJD_1 Pin=JD-1
+Added Pin To Net: NetName=VCC Pin=JD-2
+Added Pin To Net: NetName=NetJD_1 Pin=JD-3
+Added Pin To Net: NetName=GND Pin=JD-4
+Added Pin To Net: NetName=NetR4_1 Pin=R4-1
+Added Pin To Net: NetName=NetR4_2 Pin=R4-2
+Added Pin To Net: NetName=NetR4_2 Pin=U7-1
+Added Pin To Net: NetName=NetJD_1 Pin=U7-2
+Added Pin To Net: NetName=NetBD_3 Pin=U7-3
+Added Pin To Net: NetName=-VCC Pin=U7-4
+Added Pin To Net: NetName=GND Pin=U7-5
+Added Pin To Net: NetName=NetU7_6 Pin=U7-6
+Added Pin To Net: NetName=VCC Pin=U7-7
+Added Pin To Net: NetName=NetR4_1 Pin=U7-8
+Added Pin To Net: NetName=GND Pin=U8-1
+Added Pin To Net: NetName=NetU7_6 Pin=U8-2
+Added Pin To Net: NetName=GND Pin=U8-3
+Added Pin To Net: NetName=VCC Pin=U8-4
+Added Pin To Net: NetName=CELLD Pin=U8-5
+Added Pin To Net: NetName=GND Pin=U8-6
+Added Pin To Net: NetName=VCC Pin=U8-7
+Added Pin To Net: NetName=NetFCD_2 Pin=U8-8
+Added Member To Class: ClassName=Célula 4 Member=Component BD Res Tap
+Added Member To Class: ClassName=Célula 3 Member=Component FCC Cap
+Added Member To Class: ClassName=Célula 4 Member=Component FCD Cap
+Added Member To Class: ClassName=Célula 4 Member=Component JD 691244510004
+Added Member To Class: ClassName=Célula 4 Member=Component R4 Res2
+Added Member To Class: ClassName=Célula 4 Member=Component U7 INA126PA
+Added Member To Class: ClassName=Célula 4 Member=Component U8 MAX7410EPA
